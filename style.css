@@ -69,5 +69,11 @@ h2 {
     text-decoration: none;
     color: black;
     background: #a33aa3;
-    border-radius: 4px
+    border-radius: 4px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 0 rgba(8, 114, 244, 0.6);
+    transition: transform 150ms;
 }
