@@ -37,7 +37,7 @@ h2 {
     padding: 2rem;
 }
 
-.flex-clumn {
+.flex-column {
     display: flex;
     flex-direction: column;
 }
