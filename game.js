@@ -1,5 +1,6 @@
 const question = document.querySelector('#question');
-const choices = Array.from(document.querySelectorALL('.choice-text'));
+// const choices = Array.from(document.querySelectorALL('.choice-text'));
+const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
@@ -12,36 +13,56 @@ let availableQuestions = [];
 
 let questions = [
      {
-        question: 'what is pseudocoding?', 
+        question: 'What is JavaScript?', 
         choice1: 'programming language',
-        choice2: 'it is a simple way of describing a set of instructions that does not have to use specific syntax',
+        choice2: 'JavaScript is the programming language of the Web',
         choice3: 'Computer generated',
-        choice4: 'Fake news',
+        choice4: 'Coffee news',
         answer: 2,
 
     },
     {
-        question: 'what is 2 + 2?', 
-        choice1: '2',
-        choice2: '4',
+        question: 'what is a JavaScript program?', 
+        choice1: 'A JavaScript program is a list of programming statements',
+        choice2: ' you can fade elements in and out of visibility',
         choice3: '21',
         choice4: '17',
-        answer: 2,
+        answer: 1,
  
      },
      {
-        question: 'what is 2 + 2?', 
+        question: 'What are Strings in Javascript?', 
         choice1: '2',
         choice2: '4',
-        choice3: '21',
+        choice3: 'Strings are text, written within double or single quotes.',
         choice4: '17',
-        answer: 2,
+        answer: 3,
  
      },
      {
-        question: 'what is 2 + 2?', 
+        question: 'what are JavaScript Variables?', 
         choice1: '2',
         choice2: '4',
+        choice3: '21',
+        choice4: 'variables are used to store data values',
+        answer: 4,
+ 
+     },
+    
+     {
+        question: 'What are JavaScript Variables', 
+        choice1: '2',
+        choice2: 'JavaScript variables are containers for storing data values.',
+        choice3: '21',
+        choice4: 'used to explain JavaScript code, and to make it more readable.',
+        answer: 2,
+ 
+     },
+    
+     {
+        question: 'What are JavaScript comments?', 
+        choice1: '2',
+        choice2: 'JavaScript comments can be used to explain JavaScript code, and to make it more readable',
         choice3: '21',
         choice4: '17',
         answer: 2,
@@ -49,62 +70,42 @@ let questions = [
      },
     
      {
-        question: 'what is 2 + 2?', 
+        question: 'What are JavaScript Data Types?', 
         choice1: '2',
-        choice2: '4',
+        choice2: '4is used to  to automatically resize a website',
         choice3: '21',
-        choice4: '17',
-        answer: 2,
+        choice4: 'JavaScript variables can hold many data types: numbers, strings, objects and more.',
+        answer: 4,
  
      },
     
      {
-        question: 'what is 2 + 2?', 
+        question: 'What are JavaScript Functions?', 
         choice1: '2',
         choice2: '4',
         choice3: '21',
-        choice4: '17',
-        answer: 2,
+        choice4: 'JavaScript function is a block of code designed to perform a particular task',
+        answer: 4,
  
      },
     
      {
-        question: 'what is 2 + 2?', 
+        question: 'what is a JavaScript Arrays?', 
         choice1: '2',
         choice2: '4',
-        choice3: '21',
+        choice3: 'JavaScript arrays are used to store multiple values in a single variable',
         choice4: '17',
-        answer: 2,
+        answer: 3,
  
      },
     
      {
-        question: 'what is 2 + 2?', 
+        question: 'what are JavaScript Booleans?', 
         choice1: '2',
         choice2: '4',
-        choice3: '21',
+        choice3: 'A JavaScript Boolean represents one of two values: true or false.',
         choice4: '17',
-        answer: 2,
- 
-     },
-    
-     {
-        question: 'what is 2 + 2?', 
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
- 
-     },
-    
-     {
-        question: 'what is 2 + 2?', 
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
+        answer: 3,
  
      }
      
