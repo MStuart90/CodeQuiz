@@ -1,9 +1,9 @@
 const question = document.querySelector('#question');
-// const choices = Array.from(document.querySelectorALL('.choice-text'));
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
+const timerElement = document.querySelector('#timerCount');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -18,7 +18,7 @@ let questions = [
         choice2: 'JavaScript is the programming language of the Web',
         choice3: 'Computer generated',
         choice4: 'Coffee news',
-        answer: 2,
+        answer: 2
 
     },
     {
@@ -27,7 +27,7 @@ let questions = [
         choice2: ' you can fade elements in and out of visibility',
         choice3: '21',
         choice4: '17',
-        answer: 1,
+        answer: 1
  
      },
      {
@@ -36,7 +36,7 @@ let questions = [
         choice2: '4',
         choice3: 'Strings are text, written within double or single quotes.',
         choice4: '17',
-        answer: 3,
+        answer: 3
  
      },
      {
@@ -45,7 +45,7 @@ let questions = [
         choice2: '4',
         choice3: '21',
         choice4: 'variables are used to store data values',
-        answer: 4,
+        answer: 4
  
      },
     
@@ -55,7 +55,7 @@ let questions = [
         choice2: 'JavaScript variables are containers for storing data values.',
         choice3: '21',
         choice4: 'used to explain JavaScript code, and to make it more readable.',
-        answer: 2,
+        answer: 2
  
      },
     
@@ -65,7 +65,7 @@ let questions = [
         choice2: 'JavaScript comments can be used to explain JavaScript code, and to make it more readable',
         choice3: '21',
         choice4: '17',
-        answer: 2,
+        answer: 2
  
      },
     
@@ -75,7 +75,7 @@ let questions = [
         choice2: '4is used to  to automatically resize a website',
         choice3: '21',
         choice4: 'JavaScript variables can hold many data types: numbers, strings, objects and more.',
-        answer: 4,
+        answer: 4
  
      },
     
@@ -85,7 +85,7 @@ let questions = [
         choice2: '4',
         choice3: '21',
         choice4: 'JavaScript function is a block of code designed to perform a particular task',
-        answer: 4,
+        answer: 4
  
      },
     
@@ -95,43 +95,58 @@ let questions = [
         choice2: '4',
         choice3: 'JavaScript arrays are used to store multiple values in a single variable',
         choice4: '17',
-        answer: 3,
+        answer: 3
  
      },
     
      {
-        question: 'what are JavaScript Booleans?', 
+        question: 'What are JavaScript Booleans?', 
         choice1: '2',
         choice2: '4',
         choice3: 'A JavaScript Boolean represents one of two values: true or false.',
         choice4: '17',
-        answer: 3,
+        answer: 3
  
      }
      
      
 ]
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+let timerInterval;
+let timerCount = 60;
+
+const SCORE_POINTS = 100;
+const MAX_QUESTIONS = 10;
 
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
+    timerInterval = setInterval(timer, 1000)
     getNewQuestion()
 }
+timer = () => {
+    timerCount--;
+    if (timerCount === 0) {
+      clearInterval(timerInterval);
+      localStorage.setItem("mostRecentScore", score);
+      return window.location.assign("/end.html");
+    } else {
+      timerElement.textContent = timerCount;
+    }
+  };
+  
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+    if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        clearInterval(timerInterval);
         localStorage.setItem('mostRecentScore', score)
-
         return window.location.assign('/end.html')
     }
 
     questionCounter++
-    progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
-    progressBarFull.style.width = '${(questionCounter/MAX_QUESTIONS) * 100}%'
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
@@ -160,7 +175,11 @@ choices.forEach(choice => {
 
         if(classToApply === "correct") {
             incrementScore(SCORE_POINTS)
+        } else {
+            timerCount = timerCount - 10
         }
+
+        
 
         selectedChoice.parentElement.classList.add(classToApply)
             
@@ -174,8 +193,8 @@ choices.forEach(choice => {
 
 
 incrementScore = num => {
-    score +=num
-    scoreText.innerText = Score
+    score += num
+    scoreText.innerText = score
 }
 
 startGame()
