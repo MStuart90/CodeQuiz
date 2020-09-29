@@ -25,25 +25,25 @@ let questions = [
         question: 'what is a JavaScript program?', 
         choice1: 'A JavaScript program is a list of programming statements',
         choice2: ' you can fade elements in and out of visibility',
-        choice3: '21',
-        choice4: '17',
+        choice3: 'In HTML, JavaScript code is inserted between <script> and </script> tags.',
+        choice4: 'JavaScript is the default scripting language in HTML.',
         answer: 1
  
      },
      {
         question: 'What are Strings in Javascript?', 
-        choice1: '2',
-        choice2: '4',
+        choice1: 'A JavaScript function is a block of JavaScript code, that can be executed when "called" for.',
+        choice2: 'function can be called when an event occurs, like when the user clicks a button.',
         choice3: 'Strings are text, written within double or single quotes.',
-        choice4: '17',
+        choice4: 'A JavaScript function is placed in the <head> section of an HTML page.',
         answer: 3
  
      },
      {
         question: 'what are JavaScript Variables?', 
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
+        choice1: 'To access an HTML element, JavaScript can use the document.getElementById(id) method.',
+        choice2: 'Using document.write() after an HTML document is loaded, will delete all existing HTML.',
+        choice3: 'The document.write() method should only be used for testing.',
         choice4: 'variables are used to store data values',
         answer: 4
  
@@ -51,9 +51,9 @@ let questions = [
     
      {
         question: 'What are JavaScript Variables', 
-        choice1: '2',
+        choice1: 'In JavaScript, the window object is the global scope object',
         choice2: 'JavaScript variables are containers for storing data values.',
-        choice3: '21',
+        choice3: 'For debugging purposes, you can call the console.log() method in the browser to display data.',
         choice4: 'used to explain JavaScript code, and to make it more readable.',
         answer: 2
  
@@ -61,19 +61,19 @@ let questions = [
     
      {
         question: 'What are JavaScript comments?', 
-        choice1: '2',
+        choice1: 'JavaScript does not have any print object or print methods.',
         choice2: 'JavaScript comments can be used to explain JavaScript code, and to make it more readable',
-        choice3: '21',
-        choice4: '17',
+        choice3: 'You cannot access output devices from JavaScript.',
+        choice4: 'In HTML, JavaScript programs are executed by the web browser.',
         answer: 2
  
      },
     
      {
         question: 'What are JavaScript Data Types?', 
-        choice1: '2',
-        choice2: '4is used to  to automatically resize a website',
-        choice3: '21',
+        choice1: 'JavaScript programs (and JavaScript statements) are often called JavaScript code.',
+        choice2: 'Semicolons separate JavaScript statements',
+        choice3: 'JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.',
         choice4: 'JavaScript variables can hold many data types: numbers, strings, objects and more.',
         answer: 4
  
@@ -91,20 +91,20 @@ let questions = [
     
      {
         question: 'what is a JavaScript Arrays?', 
-        choice1: '2',
-        choice2: '4',
+        choice1: 'JavaScript statements can be grouped together in code blocks, inside curly brackets {...}.',
+        choice2: 'The purpose of code blocks is to define statements to be executed together.',
         choice3: 'JavaScript arrays are used to store multiple values in a single variable',
-        choice4: '17',
+        choice4: 'JavaScript statements often start with a keyword to identify the JavaScript action to be performed.',
         answer: 3
  
      },
     
      {
         question: 'What are JavaScript Booleans?', 
-        choice1: '2',
-        choice2: '4',
+        choice1: 'JavaScript syntax is the set of rules, how JavaScript programs are constructed.',
+        choice2: 'JavaScript uses the var keyword to declare variables.',
         choice3: 'A JavaScript Boolean represents one of two values: true or false.',
-        choice4: '17',
+        choice4: 'JavaScript uses arithmetic operators ( + - * / ) to compute values.',
         answer: 3
  
      }

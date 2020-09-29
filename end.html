@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Congrats!! Save your name!</title>
     <link rel="stylesheet" href="assests/css/style.css">
+    <link rel="stylesheet" href="assests/css/highscores.css">
+    <link rel="stylesheet" href="assests/css/game.css">
 </head>
 <body>
     <div class="container">
@@ -12,7 +14,7 @@
             <h1 id="finalScore">0</h1>
             <form class="end-form-container">
                 <h2 id="end-text">Enter your name below to save your score!</h2>
-                <input type="text" name="name" id="username" placeholder="Enter your name">
+                <input type="text" name="name" id="username"  placeholder="Enter your name">
                 <button class="btn" id="saveScoreBtn" type="submit" 
                 onclick="saveHighScore(event)" disabled>save</button>
             </form>

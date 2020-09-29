@@ -1,6 +1,8 @@
 body {
     color: #fff;
+    color: black;
 }
+
 
 #highScoresList {
     list-style: none;
@@ -12,3 +14,12 @@ body {
     font-size: 2.8rem;
     margin-bottom: 0.5rem; 
 }
+
+/* .username {
+
+} */
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
