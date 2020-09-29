@@ -130,7 +130,7 @@ timer = () => {
     if (timerCount === 0) {
       clearInterval(timerInterval);
       localStorage.setItem("mostRecentScore", score);
-      return window.location.assign("/end.html");
+      return window.location.assign("./end.html");
     } else {
       timerElement.textContent = timerCount;
     }
@@ -141,7 +141,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         clearInterval(timerInterval);
         localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('/end.html')
+        return window.location.assign('./end.html')
     }
 
     questionCounter++
