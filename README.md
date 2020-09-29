@@ -28,4 +28,4 @@ THEN I can save my initials and score
 
 https://mstuart90.github.io/CodeQuiz/
 
-<img src ="IMGfor README" alt= "README img" >
+<img src ="IMGforREADME.PNG" alt= "README img" >
