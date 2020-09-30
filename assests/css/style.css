@@ -9,8 +9,8 @@
 
 * {
    box-sizing: border-box; 
-   margin: 2;
-   padding: 0;
+   margin: 2rem;
+   padding: 0rem;
    font-size: 62.5%;
    font-family: 'Courier Prime', monospace;
    justify-content: center;
